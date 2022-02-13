@@ -26,7 +26,7 @@ public class Controller {
     }
 
 
-    //I have used Postman API platform to test my GET/POST request
+    //I have used Postman API platform to test my GET/PUT request
     @PutMapping("prospects/{name}/{loan}/{interest}/{years}")
     void addProspect(@PathVariable String name,@PathVariable double loan,@PathVariable double interest , @PathVariable int years ) throws IOException {
         Prospect p = new Prospect(name, loan, interest, years);

@@ -19,3 +19,9 @@ Build the dockerimage:
 docker build --build-arg JAR_FILE=build/libs/*.jar -t springio/mortageplan .
 
 Now we have a docker image and can run it to create containers
+
+
+To make a get all prospects:
+http://localhost:8080/prospects/
+To add a new prospect:
+http://localhost:8080/prospects/CustomerName/Loan/Interest/Years
