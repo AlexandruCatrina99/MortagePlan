@@ -25,19 +25,8 @@ public class Controller {
         prospects= readFile("prospects.txt");
     }
 
-//    // Annotation
-//    @PutMapping("/change/{id}")
-//
-//    // Method
-//    void change(@PathVariable int id) {
-//
-//        System.out.println(ans);
-//        ans.remove(id);
-//        ans.add(id, 45);
-//
-//        System.out.println(ans);
-//    }
 
+    //I have used Postman API platform to test my GET/POST request
     @PutMapping("prospects/{name}/{loan}/{interest}/{years}")
     void addProspect(@PathVariable String name,@PathVariable double loan,@PathVariable double interest , @PathVariable int years ) throws IOException {
         Prospect p = new Prospect(name, loan, interest, years);
