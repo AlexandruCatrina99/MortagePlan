@@ -25,7 +25,18 @@ public class Controller {
         prospects= readFile("prospects.txt");
     }
 
-
+//    // Annotation
+//    @PutMapping("/change/{id}")
+//
+//    // Method
+//    void change(@PathVariable int id) {
+//
+//        System.out.println(ans);
+//        ans.remove(id);
+//        ans.add(id, 45);
+//
+//        System.out.println(ans);
+//    }
 
     @PutMapping("prospects/{name}/{loan}/{interest}/{years}")
     void addProspect(@PathVariable String name,@PathVariable double loan,@PathVariable double interest , @PathVariable int years ) throws IOException {
@@ -44,7 +55,7 @@ public class Controller {
     // Method
     ArrayList<Prospect> getProspects() {
         for (int i =0 ; i<prospects.size();i++
-             ) {
+        ) {
             System.out.println("*************************************************************");
             System.out.println("Prospect " + (i+1)+": " + prospects.get(i).getName() + " wants to borrow " +prospects.get(i).getLoan() + " € for a period of " + prospects.get(i).getYears() + " years and pay" +
                     String.format("%.2f", prospects.get(i).getMonthlyPayment()) + "€ each month");
